@@ -1,0 +1,228 @@
+---
+layout: default
+title: Become an Apprentice
+---
+
+<!-- Heading -->
+<section class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall" data-options="{direction: &quot;fromtop&quot;, animation_duration: 25, direction: &quot;reverse&quot;}">
+    <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-black-opacity-0_3--after" style="height: 140%; background-image: url({{ site.baseurl }}/assets/custom/img/careers/careers_hero.jpg); transform: translate3d(0px, -40.0274px, 0px);"></div>
+    <div class="container g-color-white text-center g-py-90">
+        <div class="u-heading-v2-6--bottom g-brd-primary g-mb-40">
+            <h2 class="text-uppercase u-heading-v2__title g-mb-10">{% t careers.become_an_apprentice.title %}</h2>
+            <h4 class="g-font-weight-200">{% t careers.become_an_apprentice.description %}</h4>
+        </div>
+        <div class="text-center">
+            <a class="btn btn-md u-btn-primary text-uppercase g-mr-10 g-mb-15" data-modal-target="#apprentice-form" href="#apprentice-form">Apply Now</a>
+            {% include apply_form.html title = "Become an Apprentice" target = "apprentice" %}
+        </div>
+    </div>
+</section>
+<!-- End Heading -->
+<!-- What we Teach -->
+<section class="g-py-50 g-pb-100">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="h3 text-uppercase mb-3">What we teach</h2>
+            <div class="d-inline-block g-width-60 g-height-1 g-bg-orange mb-2"></div>
+            <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus massa, ultrices ut tortor ac, posuere tristique dui. Mauris pretium vulputate vehicula. Ut a hendrerit magna, eget venenatis metus. Donec.</p>
+        </div>
+    </div>
+</section>
+<!-- End what we teach -->
+<!-- How the program works --> 
+<section class="g-py-50 g-pb-100 g-bg-gray-light-v5">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="h3 text-uppercase mb-3">How the program works</h2>
+            <div class="d-inline-block g-width-60 g-height-1 g-bg-orange mb-2"></div>
+            <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus massa, ultrices ut tortor ac, posuere tristique dui. Mauris pretium vulputate vehicula. Ut a hendrerit magna, eget venenatis metus. Donec.</p>
+        </div>
+    </div>
+</section>
+<!-- End How the program works --> 
+<!-- What you will need --> 
+<section class="g-py-50 g-pb-100">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="h3 text-uppercase mb-3">What you will need</h2>
+            <div class="d-inline-block g-width-60 g-height-1 g-bg-orange mb-2"></div>
+            <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus massa, ultrices ut tortor ac, posuere tristique dui. Mauris pretium vulputate vehicula. Ut a hendrerit magna, eget venenatis metus. Donec.</p>
+        </div>
+    </div>
+</section>
+<!-- End what you will need --> 
+<!-- What you will finish with -->
+<section class="g-py-50 g-pb-100 g-bg-gray-light-v5">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="h3 text-uppercase mb-3">What you will finish with</h2>
+            <div class="d-inline-block g-width-60 g-height-1 g-bg-orange mb-2"></div>
+            <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus massa, ultrices ut tortor ac, posuere tristique dui. Mauris pretium vulputate vehicula. Ut a hendrerit magna, eget venenatis metus. Donec.</p>
+        </div>
+    </div>
+</section>
+<!-- End what you will finish with -->
+<!-- Call to Action --> 
+<section class="g-bg-orange g-color-white g-pa-30">
+    <div class="d-md-flex justify-content-md-center text-center">
+        <div class="align-self-md-center">
+            <p class="lead g-font-weight-400 g-color-white g-mr-20--md g-mb-15 g-mb-0--md">Interested in joining our teams in London or Barcelona?</p>
+        </div>
+        <div class="align-self-md-center">
+            <a class="btn btn-lg u-btn-white text-uppercase g-font-weight-600 g-font-size-12" data-modal-target="#apprentice-form" href="#apprentice-form">Apply Now</a>
+        </div>
+    </div>
+</section>
+<!-- End Call to action --> 
+<!-- Hear from past apprentices --> 
+<section class="g-py-50 g-pb-100">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="h3 text-uppercase mb-3">Hear from past apprentices</h2>
+            <div class="d-inline-block g-width-60 g-height-1 g-bg-orange mb-2"></div>
+            <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus massa, ultrices ut tortor ac, posuere tristique dui. Mauris pretium vulputate vehicula. Ut a hendrerit magna, eget venenatis metus. Donec.</p>
+        </div>
+    </div>
+</section>
+<!-- End Hear from past apprentices --> 
+<!-- Life as an Apprentice -->
+<section class="g-py-50 g-bg-gray-light-v5" id="publications">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="h3 text-uppercase mb-3">{% t careers.life_at_codurance_title %}</h2>
+            <div class="d-inline-block g-width-60 g-height-1 g-bg-orange mb-2"></div>
+            <p class="lead mb-0">{% t careers.life_at_codurance_subtitle %}</p>
+        </div>
+        <div class="row mx-0">
+            {% for post in site.categories[page.category] limit : 3 %}
+                {% if post.image.src and post.image.src contains '://' %}
+                    {% assign postImgUrl = post.image.src %}
+                    {% elsif post.image.src%}
+                    {% assign postImgUrl = post.image.src | prepend: site.baseurl %}
+                {% else %}
+                    {% assign postImgUrl = site.default_post_image | prepend: site.baseurl %}
+                {% endif %}
+                <div class="col-lg-4 px-0 g-mb-30">
+                    <!-- Article -->
+                    <article class="u-block-hover g-brd-around g-brd-top-none g-brd-gray-light-v4  h-100">
+                        <figure class="g-overflow-hidden" style="height: 240px;">
+                            <a href="{{ post.url | prepend: site.baseurl }}">
+                                <img class="img-fluid w-100 u-block-hover__main--zoom-v1" src="{{ postImgUrl }}">
+                            </a>
+                        </figure>
+
+                        <div class="text-center g-pa-40">
+                            <h3 class="h4 text-uppercase g-font-weight-600 g-mb-10">
+                                <a class="g-color-gray-dark-v2 g-text-underline--none--hover" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                            </h3>
+                            <a class="text-uppercase g-font-weight-600 g-font-size-12" href="#{{ post.url | prepend: site.baseurl }}">Read More</a>
+                        </div>
+                    </article>
+                    <!-- End Article -->
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- End Life as an Apprentice --> 
+<!-- Interview Timeline --> 
+<section class="g-py-50 g-pb-100">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="h3 text-uppercase mb-3">{% t careers.become_a_craftsperson.hiring_process.title %}</h2>
+            <div class="d-inline-block g-width-60 g-height-1 g-bg-orange mb-2"></div>
+            <p class="lead mb-0">{% t careers.become_a_craftsperson.hiring_process.subtitle %}</p>
+        </div>
+        <!-- Icon Blocks -->
+        <ul class="row list-inline u-info-v9-1 mb-0">
+            <li class="col-md-3 list-inline-item g-mx-0 g-mb-30">
+                <!-- Icon Blocks -->
+                <div class="u-block-hover text-center g-px-40">
+                    <div class="g-mb-5">
+                        <span class="u-icon-v1 g-width-85 g-height-85 g-color-main g-font-size-50 rounded-circle">
+                        <i class="icon-communication-006 u-line-icon-pro"></i>
+                        </span>
+                    </div>
+                    <div class="g-mb-25">
+                        <span class="u-icon-v2 u-shadow-v22 g-width-25 g-height-25 g-color-primary g-bg-white g-font-size-9 rounded-circle">
+                            <i  class="fa fa-check"></i>
+                        </span>
+                    </div>
+                    <h3 class="g-color-primary g-font-weight-600 g-font-size-17 text-uppercase mb-3">
+                        <span class="g-color-main g-font-weight-700">01.</span>
+                        {% t careers.become_a_craftsperson.hiring_process.step_1.title %}
+                    </h3>
+                    <p>{% t careers.become_a_craftsperson.hiring_process.step_1.description %}</p>
+                </div>
+                <!-- End Icon Blocks -->
+            </li>
+            <li class="col-md-3 list-inline-item g-mx-0 g-mb-30">
+                <!-- Icon Blocks -->
+                <div class="u-block-hover text-center g-px-40">
+                    <div class="g-mb-5">
+                        <span class="u-icon-v1 g-width-85 g-height-85 g-color-main g-font-size-50 rounded-circle">
+                        <i class="icon-education-121 u-line-icon-pro"></i>
+                        </span>
+                    </div>
+                    <div class="g-mb-25">
+                        <span class="u-icon-v2 u-shadow-v22 g-width-25 g-height-25 g-color-primary g-bg-white g-font-size-9 rounded-circle">
+                            <i class="fa fa-check"></i>
+                        </span>
+                    </div>
+                    <h3 class="g-color-primary g-font-weight-600 g-font-size-17 text-uppercase mb-3">
+                        <span class="g-color-main g-font-weight-700">02.</span>
+                        {% t careers.become_a_craftsperson.hiring_process.step_2.title %}
+                    </h3>
+                    <p>{% t careers.become_a_craftsperson.hiring_process.step_2.description %}</p>
+                </div>
+                <!-- End Icon Blocks -->
+            </li>
+            <li class="col-md-3 list-inline-item g-mx-0 g-mb-30">
+                <!-- Icon Blocks -->
+                <div class="u-block-hover text-center g-px-40">
+                    <div class="g-mb-5">
+                        <span class="u-icon-v1 g-width-85 g-height-85 g-color-main g-font-size-50 rounded-circle">
+                            <i class="icon-communication-180 u-line-icon-pro"></i>
+                        </span>
+                    </div>
+                    <div class="g-mb-25">
+                        <span class="u-icon-v2 u-shadow-v22 g-width-25 g-height-25 g-color-primary g-bg-white g-font-size-9 rounded-circle">
+                            <i class="fa fa-check"></i>
+                        </span>
+                    </div>
+                    <h3 class="g-color-primary g-font-weight-600 g-font-size-17 text-uppercase mb-3">
+                        <span class="g-color-main g-font-weight-700">03.</span>
+                        {% t careers.become_a_craftsperson.hiring_process.step_3.title %}
+                    </h3>
+                    <p>{% t careers.become_a_craftsperson.hiring_process.step_3.description %}</p>
+                </div>
+                <!-- End Icon Blocks -->
+            </li>
+            <li class="col-md-3 list-inline-item g-mx-0 g-mb-30">
+                <!-- Icon Blocks -->
+                <div class="u-block-hover text-center g-px-40">
+                    <div class="g-mb-5">
+                        <span class="u-icon-v1 g-width-85 g-height-85 g-color-main g-font-size-50 rounded-circle">
+                            <i class="icon-education-167 u-line-icon-pro"></i>
+                        </span>
+                    </div>
+                    <div class="g-mb-25">
+                        <span class="u-icon-v2 u-shadow-v22 g-width-25 g-height-25 g-color-primary g-bg-white g-font-size-9 rounded-circle">
+                            <i class="fa fa-check"></i>
+                        </span>
+                    </div>
+                    <h3 class="g-color-primary g-font-weight-600 g-font-size-17 text-uppercase mb-3">
+                        <span class="g-color-main g-font-weight-700">04.</span>
+                        {% t careers.become_a_craftsperson.hiring_process.step_4.title %}
+                    </h3>
+                    <p>{% t careers.become_a_craftsperson.hiring_process.step_4.description %}</p>
+                </div>
+                <!-- End Icon Blocks -->
+            </li>
+        </ul>
+        <!-- End Icon Blocks -->
+    </div>
+</section>
+<!-- End Interview Timeline --> 
+<!-- Final Call to Action -->
+<!-- End Final Call to Action -->
