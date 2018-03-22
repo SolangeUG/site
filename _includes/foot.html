@@ -60,7 +60,14 @@
         
         $('[data-toggle="popover"]').popover();
         
-        
+
+        $('#js-carousel-sync-for').on('init', function (event, slick) {
+          $(slick.$slides).css('height', 'auto');
+        });
+
+        $('#js-carousel-sync-nav').on('init', function (event, slick) {
+          $(slick.$slides).css('height', 'auto');
+        });
 
         $('#carousel1').slick('setOption', 'customPaging', function (slider, i) {
           var title = $(slider.$slides[i]).data('title');
